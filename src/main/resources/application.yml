@@ -1,0 +1,25 @@
+micronaut:
+  application:
+    name: kafkaToAerospike
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**
+aerospike:
+  host: 10.1.1.55
+#  host: localhost
+  port: 3000
+  namespace:  bar
+netty:
+  default:
+    allocator:
+      max-order: 3
+kafka:
+  bootstrap:
+    servers: 10.1.1.55:9092
+#    servers: localhost:9092
+timezone : "IST"
