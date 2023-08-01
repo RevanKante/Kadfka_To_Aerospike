@@ -15,7 +15,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@KafkaListener(offsetReset = OffsetReset.LATEST, offsetStrategy = OffsetStrategy.DISABLED)
+@KafkaListener(offsetReset = OffsetReset.LATEST, offsetStrategy = OffsetStrategy.AUTO)
 public class SFToAerospikeListener {
 
     private static final Logger logger = LoggerFactory.getLogger(SFToAerospikeListener.class);
